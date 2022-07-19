@@ -1,0 +1,194 @@
+{
+  "accountRecovery": {
+    "text": "Account recovery requires verified contact information",
+    "note": "Notifies user about account recovery"
+  },
+  "backToSignIn": {
+    "text": "Back to Sign In",
+    "note": "Allows user to return (i.e., go back) to the sign in page"
+  },
+  "changePassword": {
+    "text": "Change Password",
+    "note": "Allows user to change (i.e., modify, edit) their password"
+  },
+  "changing": {
+    "text": "Changing",
+    "note": "In-progress status indicator"
+  },
+  "code": {
+    "text": "Code",
+    "note": "A secret code (noun) sent to the user for sign in"
+  },
+  "confirm": {
+    "text": "Confirm",
+    "note": "(i.e., verify)"
+  },
+  "confirmPassword": {
+    "text": "Confirm Password",
+    "note": "User prompt"
+  },
+  "confirmSignUp": {
+    "text": "Confirm Sign Up",
+    "note": "User prompt"
+  },
+  "confirmSMSCode": {
+    "text": "Confirm SMS Code",
+    "note": "User prompt. SMS is an acronym for Short Message Service"
+  },
+  "confirmTOTPCode": {
+    "text": "Confirm TOTP Code",
+    "note": "User prompt. TOTP is an acronym for Time-based One-Time Password"
+  },
+  "confirmationCode": {
+    "text": "Confirmation Code",
+    "note": "A secret code (noun) used to help validate the user"
+  },
+  "confirming": {
+    "text": "Confirming",
+    "note": "In-progress status indicator"
+  },
+  "createAccount": {
+    "text": "Create Account",
+    "note": "User prompt"
+  },
+  "creatingAccount": {
+    "text": "Creating Account",
+    "note": "In-progress status indicator"
+  },
+  "Email": {
+    "text": "Email",
+    "note": "(direct translation)"
+  },
+  "enterYourCode": {
+    "text": "Enter your code",
+    "note": "User prompt"
+  },
+  "enterYourUsername": {
+    "text": "Enter your username",
+    "note": "User prompt"
+  },
+  "enterYourPhoneNumber": {
+    "text": "Enter your phone number",
+    "note": "User prompt"
+  },
+  "enterYourEmail": {
+    "text": "Enter your email",
+    "note": "User prompt"
+  },
+  "forgotYourPassword": {
+    "text": "Forgot your password?",
+    "note": "Asks user a question"
+  },
+  "hidePassword": {
+    "text": "Hide password",
+    "note": "Allows user to hide (i.e., not display) their password instead of showing it"
+  },
+  "loading": {
+    "text": "Loading",
+    "note": "In-progress status indicator"
+  },
+  "username": {
+    "text": "Username",
+    "note": "(direct translation)"
+  },
+  "newPassword": {
+    "text": "New password",
+    "note": "(direct translation)"
+  },
+  "password": {
+    "text": "Password",
+    "note": "(direct translation)"
+  },
+  "phoneNumber": {
+    "text": "Phone Number",
+    "note": "(direct translation)"
+  },
+  "resendCode": {
+    "text": "Resend Code",
+    "note": "Allows user to send the code again"
+  },
+  "resetYourPassword": {
+    "text": "Reset your password",
+    "note": "User prompt"
+  },
+  "resetYourPasswordCapitalized": {
+    "text": "Reset your Password",
+    "note": "User prompt"
+  },
+  "sendCodeCapitalized": {
+    "text": "Send Code",
+    "note": "User prompt"
+  },
+  "sendCode": {
+    "text": "Send code",
+    "note": "User prompt"
+  },
+  "sending": {
+    "text": "Sending",
+    "note": "In-progress status indicator"
+  },
+  "setupTOTP": {
+    "text": "Setup TOTP",
+    "note": "TOTP is an acronym for Time-based One-Time Password"
+  },
+  "showPassword": {
+    "text": "Show password",
+    "note": "Allows user to show (i.e., display) their password instead of hiding it"
+  },
+  "signIn": {
+    "text": "Sign in",
+    "note": "Allows user to sign in (i.e., log into) their account"
+  },
+  "signInCapitalized": {
+    "text": "Sign In",
+    "note": "Allows user to sign in (i.e., log into) their account"
+  },
+  "signInWithAmazon": {
+    "text": "Sign In with Amazon",
+    "note": "Allows user to sign into (i.e., access) their account using Amazon"
+  },
+  "signInWithApple": {
+    "text": "Sign In with Apple",
+    "note": "Allows user to sign into (i.e., access) their account using Apple"
+  },
+  "signInWithFacebook": {
+    "text": "Sign In with Facebook",
+    "note": "Allows user to sign into (i.e., access) their account using Facebook"
+  },
+  "signInWithGoogle": {
+    "text": "Sign In with Google'",
+    "note": "Allows user to sign into (i.e., access) their account using Google"
+  },
+  "signInToYourAccount": {
+    "text": "Sign in to your account",
+    "note": "Prompts user to access their account"
+  },
+  "createNewAccount": {
+    "text": "Create a new account",
+    "note": "User prompt"
+  },
+  "signingIn": {
+    "text": "Signing in",
+    "note": "In-progress status indicator"
+  },
+  "skip": {
+    "text": "Skip",
+    "note": "Allows user to skip over (i.e., not complete) a section"
+  },
+  "submit": {
+    "text": "Submit",
+    "note": "Displayed on a button for submitting form data"
+  },
+  "submitting": {
+    "text": "Submitting",
+    "note": "In-progress status indicator"
+  },
+  "verifyContact": {
+    "text": "Verify Contact",
+    "note": "Prompts user to verify (i.e., confirm) their contact information"
+  },
+  "verify": {
+    "text": "Verify",
+    "note": "(i.e., confirm)"
+  }
+}
