@@ -13,13 +13,13 @@ concurrency:
 
 on:
   pull_request_target:
-    branches:
-      [
+    branches: [
         main,
         ui-svelte/main,
         ui-geo/main,
         ui-react@v2,
         studio-release,
+        in-app-messaging/main
         in-app-messaging/release,
       ]
     types: [opened, synchronize, labeled]
@@ -48,7 +48,7 @@ jobs:
             const label = 'run-tests';
             github.issues.removeLabel({ owner, repo, issue_number, name: label });
   test:
-    uses: aws-amplify/amplify-ui/.github/workflows/reusable-e2e.yml@main
+    uses: aws-amplify/amplify-ui/.github/workflows/reusable-e2e.yml@in-app-messaging/main
     needs: setup
     with:
       commit: ${{ github.event.pull_request.head.sha }}
