@@ -1,1 +1,28 @@
-<h1>sign in</h1>
+<div data-amplify-authenticator>
+  <div data-amplify-container>
+    <div data-amplify-router style="display: block; box-sizing: border-box">
+      <p
+        amplify-text-poc
+        variation="primary"
+        color="var(--amplify-components-tabs-item-active-color)"
+        lineHeight="1.5em"
+        fontWeight="400"
+        fontSize="1em"
+        fontStyle="normal"
+        textDecoration="none"
+        width="30vw"
+        fontSize="var(--amplify-components-tabs-item-font-size)"
+        fontWeight="var(--amplify-components-tabs-item-font-weight)"
+      >
+        Sign In
+      </p>
+      <amplify-poc-text-field
+        [hasError]="false"
+        describedBy="custom-aria-describedBy"
+      >
+        <input amplify-input placeholder="Username" />
+        <p amplify-error>There is an error</p>
+      </amplify-poc-text-field>
+    </div>
+  </div>
+</div>
