@@ -26,6 +26,8 @@ import { AmplifyTextExampleComponent } from 'src/pages/ui/primitive-poc/text/tex
 import { AmplifyTextFieldExampleComponent } from 'src/pages/ui/primitive-poc/text-field/text-field.component';
 import { AmplifyPasswordFieldExampleComponent } from 'src/pages/ui/primitive-poc/password-field/password-field.component';
 import { AmplifyFlexExampleComponent } from 'src/pages/ui/primitive-poc/flex/flex.component';
+import { AmplifySignInComponent } from 'src/pages/demo/sign-in/sign-in.component';
+import { AmplifySignUpComponent } from 'src/pages/demo/sign-up/sign-up.component';
 
 const routes: Routes = [
   {
@@ -135,6 +137,14 @@ const routes: Routes = [
   {
     path: 'ui/primitive-poc/text',
     component: AmplifyTextExampleComponent,
+  },
+  {
+    path: 'demo/sign-in',
+    component: AmplifySignInComponent,
+  },
+  {
+    path: 'demo/sign-up',
+    component: AmplifySignUpComponent,
   },
 ];
 
