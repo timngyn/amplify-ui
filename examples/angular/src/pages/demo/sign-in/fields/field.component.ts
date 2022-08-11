@@ -11,7 +11,7 @@ export class AmplifyFieldComponent implements OnInit {
   fieldStaticData = {
     username: ['username', 'password'],
     phone: ['phone', 'password', 'Email'],
-    usernameSignUp: ['username', 'password', 'confirmPassword'],
+    usernameSignUp: ['username', 'password', 'confirmPassword', 'email'],
     phoneSignUp: ['phone', 'password', 'confirmPassword', 'email'],
   };
 
@@ -24,7 +24,7 @@ export class AmplifyFieldComponent implements OnInit {
     else
       this.fields =
         this.fieldType == 'phone'
-          ? this.fieldStaticData['usernameSignUp']
-          : this.fieldStaticData['phoneSignUp'];
+          ? this.fieldStaticData['phoneSignUp']
+          : this.fieldStaticData['usernameSignUp'];
   }
 }
