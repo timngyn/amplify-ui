@@ -94,5 +94,40 @@ describe('@aws-amplify/ui', () => {
 Did you forget to add '{value:"#f90"}'?`);
       });
     });
+
+    describe('CSS text', () => {
+      it('should correctly order pagination values', () => {
+        const paginationDefaultHoverBackground =
+          '--amplify-components-pagination-button-hover-background-color: var(--amplify-colors-overlay-10)';
+        const paginationDefaultHoverColor = `--amplify-components-pagination-button-hover-color: var(--amplify-colors-font-primary)`;
+        const paginationSetHoverBackground =
+          '--amplify-components-pagination-button-hover-background-color: red';
+        const paginationSetHoverColor = `--amplify-components-pagination-button-hover-color: red`;
+        const theme = {
+          name: 'test-theme',
+          tokens: {
+            components: {
+              pagination: {
+                button: {
+                  _hover: {
+                    backgroundColor: { value: 'red' },
+                    color: { value: 'red' },
+                  },
+                },
+              },
+            },
+          },
+        };
+        const cssTextArray = createTheme(theme)
+          .cssText.split(';')
+          .map((x) => x.trim());
+        expect(
+          cssTextArray.indexOf(paginationDefaultHoverBackground)
+        ).toBeLessThan(cssTextArray.indexOf(paginationSetHoverBackground));
+        expect(cssTextArray.indexOf(paginationDefaultHoverColor)).toBeLessThan(
+          cssTextArray.indexOf(paginationSetHoverColor)
+        );
+      });
+    });
   });
 });
