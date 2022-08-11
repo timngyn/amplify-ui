@@ -1,0 +1,32 @@
+<div *ngFor="let field of fields">
+  <amplify-poc-text-field
+    *ngIf="field == 'phone'"
+    describedBy="custom-aria-describedBy"
+  >
+    <input amplify-input placeholder="Phone" />
+  </amplify-poc-text-field>
+  <amplify-poc-text-field
+    *ngIf="field == 'username'"
+    describedBy="custom-aria-describedBy"
+  >
+    <input amplify-input placeholder="username" />
+  </amplify-poc-text-field>
+  <amplify-password-poc
+    *ngIf="field == 'password'"
+    describedBy="custom-aria-describedBy"
+  >
+    <input amplify-password-input placeholder="Password" />
+  </amplify-password-poc>
+  <amplify-password-poc
+    *ngIf="field == 'confirmPassword'"
+    describedBy="custom-aria-describedBy"
+  >
+    <input amplify-password-input placeholder="Confirm Password" />
+  </amplify-password-poc>
+  <amplify-poc-text-field
+    *ngIf="field == 'email'"
+    describedBy="custom-aria-describedBy"
+  >
+    <input amplify-input placeholder="Email" />
+  </amplify-poc-text-field>
+</div>

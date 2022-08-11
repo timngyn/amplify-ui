@@ -46,6 +46,7 @@ import { AmplifyFlexExampleComponent } from 'src/pages/ui/primitive-poc/flex/fle
 import { AmplifySignInComponent } from 'src/pages/demo/sign-in/sign-in.component';
 import { AmplifySignUpComponent } from 'src/pages/demo/sign-up/sign-up.component';
 import { AmplifyTabsExampleComponent } from 'src/pages/ui/primitive-poc/tabs/tabs.component';
+import { AmplifyFieldComponent } from 'src/pages/demo/sign-in/fields/field.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { AmplifyTabsExampleComponent } from 'src/pages/ui/primitive-poc/tabs/tab
     AmplifySignInComponent,
     AmplifySignUpComponent,
     AmplifyTabsExampleComponent,
+    AmplifyFieldComponent,
   ],
   imports: [
     BrowserModule,

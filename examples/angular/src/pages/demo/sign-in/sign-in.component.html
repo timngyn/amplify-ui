@@ -6,12 +6,7 @@
           <form data-amplify-form>
             <div class="amplify-flex amplify-authenticator__column">
               <div class="amplify-flex amplify-authenticator__column">
-                <amplify-poc-text-field describedBy="custom-aria-describedBy">
-                  <input amplify-input placeholder="username" />
-                </amplify-poc-text-field>
-                <amplify-password-poc describedBy="custom-aria-describedBy">
-                  <input amplify-password-input placeholder="Password" />
-                </amplify-password-poc>
+                <amplify-fields [fieldType]="signInType"></amplify-fields>
                 <button amplify-button-poc variation="primary">Sign In</button>
               </div>
             </div>
@@ -21,18 +16,10 @@
           <form data-amplify-form>
             <div class="amplify-flex amplify-authenticator__column">
               <div class="amplify-flex amplify-authenticator__column">
-                <amplify-poc-text-field describedBy="custom-aria-describedBy">
-                  <input amplify-input placeholder="username" />
-                </amplify-poc-text-field>
-                <amplify-password-poc describedBy="custom-aria-describedBy">
-                  <input amplify-password-input placeholder="Password" />
-                </amplify-password-poc>
-                <amplify-password-poc describedBy="custom-aria-describedBy">
-                  <input
-                    amplify-password-input
-                    placeholder="Confirm Password"
-                  />
-                </amplify-password-poc>
+                <amplify-fields
+                  [fieldType]="signInType"
+                  [isSignUp]="true"
+                ></amplify-fields>
                 <button amplify-button-poc variation="primary">
                   Create account
                 </button>
