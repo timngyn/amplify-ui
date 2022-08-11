@@ -9,10 +9,22 @@ interface LinkSizeTokens {
 }
 
 export interface LinkTokens {
+  /**
+   * @deprecated To be removed in the next major version release, please use _active
+   */
   active: LinkStateTokens;
   color: DesignToken<ColorValue>;
+  /**
+   * @deprecated To be removed in the next major version release, please use _focus
+   */
   focus: LinkStateTokens;
+  /**
+   * @deprecated To be removed in the next major version release, please use _hover
+   */
   hover: LinkStateTokens;
+  /**
+   * @deprecated To be removed in the next major version release, please use _visited
+   */
   visited: LinkStateTokens;
   _active?: LinkStateTokens;
   _focus?: LinkStateTokens;

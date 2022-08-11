@@ -31,7 +31,11 @@ interface SwitchFieldThumbTokens {
   backgroundColor: DesignToken<BackgroundColorValue>;
   borderColor: DesignToken<BorderColorValue>;
   borderRadius: DesignToken<BorderRadiusValue>;
+  /**
+   * @deprecated To be removed in the next major version release, please use _checked
+   */
   checked: SwitchFieldThumbCheckedTokens;
+  _checked?: SwitchFieldThumbCheckedTokens;
   transition: SwitchFieldThumbTransitionTokens;
   width: DesignToken<SpaceValue>;
 }
@@ -46,6 +50,9 @@ interface SwitchFieldThumbCheckedTokens {
 interface SwitchFieldTrackTokens {
   backgroundColor: DesignToken<BackgroundColorValue>;
   borderRadius: DesignToken<BorderRadiusValue>;
+  /**
+   * @deprecated To be removed in the next major version release, please use _checked
+   */
   checked: SwitchFieldTrackCheckedTokens;
   _checked?: SwitchFieldTrackCheckedTokens;
   height: DesignToken<SpaceValue>;

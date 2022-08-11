@@ -26,8 +26,14 @@ interface PaginationButtonTokens {
   transitionProperty: DesignToken<TransitionPropertyValue>;
   transitionDuration: DesignToken<TransitionDurationValue>;
   _hover?: PaginationButtonHoverTokens;
+  /**
+   * @deprecated To be removed in the next major version release, please use _hover
+   */
   hover: PaginationButtonHoverTokens;
   _disabled?: PaginationButtonDisabledTokens;
+  /**
+   * @deprecated To be removed in the next major version release, please use _disabled
+   */
   disabled: PaginationButtonDisabledTokens;
 }
 

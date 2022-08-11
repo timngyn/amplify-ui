@@ -22,6 +22,9 @@ interface TableDefaultTokens {
 }
 
 interface TableRowTokens extends TableDefaultTokens {
+  /**
+   * @deprecated To be removed in the next major version release, please use _hover
+   */
   hover: TableRowHoverTokens;
   _hover?: TableRowHoverTokens;
   striped: TableRowStripedTokens;
