@@ -146,6 +146,12 @@ const routes: Routes = [
   {
     path: 'demo/sign-in',
     component: AmplifySignInComponent,
+    data: { type: 'username' },
+  },
+  {
+    path: 'demo/sign-in-phone',
+    component: AmplifySignInComponent,
+    data: { type: 'phone' },
   },
   {
     path: 'demo/sign-up',
