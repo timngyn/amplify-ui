@@ -23,6 +23,7 @@ interface TableDefaultTokens {
 
 interface TableRowTokens extends TableDefaultTokens {
   hover: TableRowHoverTokens;
+  _hover?: TableRowHoverTokens;
   striped: TableRowStripedTokens;
 }
 

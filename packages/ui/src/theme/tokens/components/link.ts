@@ -14,6 +14,10 @@ export interface LinkTokens {
   focus: LinkStateTokens;
   hover: LinkStateTokens;
   visited: LinkStateTokens;
+  _active?: LinkStateTokens;
+  _focus?: LinkStateTokens;
+  _hover?: LinkStateTokens;
+  _visited?: LinkStateTokens;
 }
 
 export const link: LinkTokens = {

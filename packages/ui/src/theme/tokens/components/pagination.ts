@@ -25,7 +25,9 @@ interface PaginationButtonTokens {
   paddingInlineEnd: DesignToken<SpaceValue>;
   transitionProperty: DesignToken<TransitionPropertyValue>;
   transitionDuration: DesignToken<TransitionDurationValue>;
+  _hover?: PaginationButtonHoverTokens;
   hover: PaginationButtonHoverTokens;
+  _disabled?: PaginationButtonDisabledTokens;
   disabled: PaginationButtonDisabledTokens;
 }
 

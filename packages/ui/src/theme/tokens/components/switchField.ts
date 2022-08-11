@@ -47,6 +47,7 @@ interface SwitchFieldTrackTokens {
   backgroundColor: DesignToken<BackgroundColorValue>;
   borderRadius: DesignToken<BorderRadiusValue>;
   checked: SwitchFieldTrackCheckedTokens;
+  _checked?: SwitchFieldTrackCheckedTokens;
   height: DesignToken<SpaceValue>;
   padding: DesignToken<SpaceValue>;
   transition: SwitchFieldTrackTransitionTokens;
