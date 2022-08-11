@@ -19,9 +19,6 @@ target 'ReactNative' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  pod 'React', :path => '../node_modules/react-native/'
-  pod 'React-Core', :path => '../node_modules/react-native/'
-
   target 'ReactNativeTests' do
     inherit! :complete
     # Pods for testing

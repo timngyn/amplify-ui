@@ -1,14 +1,5 @@
-import {
-  getStorybookUI,
-  configure,
-  addDecorator,
-} from '@storybook/react-native';
-import { withKnobs } from '@storybook/addon-knobs';
-
-import './rn-addons';
-
-// enables knobs for all stories
-addDecorator(withKnobs);
+import { getStorybookUI, configure } from '@storybook/react-native';
+import { Platform } from 'react-native';
 
 // import stories
 configure(() => {
@@ -17,6 +8,12 @@ configure(() => {
 
 // Refer to https://github.com/storybookjs/react-native/tree/master/app/react-native#getstorybookui-options
 // To find allowed options for getStorybookUI
-const StorybookUIRoot = getStorybookUI({});
+const StorybookUIRoot = getStorybookUI({
+  /*
+   * Get React Native server IP if hostname is `localhost`
+   * On Android emulator, the IP of host is `10.0.2.2`
+   */
+  host: Platform.OS === 'android' ? '10.0.2.2' : '0.0.0.0',
+});
 
 export default StorybookUIRoot;
