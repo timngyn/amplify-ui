@@ -6,6 +6,7 @@ import {
   AmplifyTextModule,
   AmplifyPasswordFieldModule,
   AmplifyTextFieldModule,
+  AmplifyTabsModule,
 } from '@aws-amplify/ui-angular';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -44,6 +45,7 @@ import { AmplifyPasswordFieldExampleComponent } from 'src/pages/ui/primitive-poc
 import { AmplifyFlexExampleComponent } from 'src/pages/ui/primitive-poc/flex/flex.component';
 import { AmplifySignInComponent } from 'src/pages/demo/sign-in/sign-in.component';
 import { AmplifySignUpComponent } from 'src/pages/demo/sign-up/sign-up.component';
+import { AmplifyTabsExampleComponent } from 'src/pages/ui/primitive-poc/tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +79,7 @@ import { AmplifySignUpComponent } from 'src/pages/demo/sign-up/sign-up.component
     AmplifyTextExampleComponent,
     AmplifySignInComponent,
     AmplifySignUpComponent,
+    AmplifyTabsExampleComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,6 +92,7 @@ import { AmplifySignUpComponent } from 'src/pages/demo/sign-up/sign-up.component
     AmplifyPasswordFieldModule,
     AmplifyFlexModule,
     AmplifyTextModule,
+    AmplifyTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

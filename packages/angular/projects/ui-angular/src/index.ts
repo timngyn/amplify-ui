@@ -23,7 +23,7 @@ export * from './lib/primitives-poc/text-field';
 export * from './lib/primitives-poc/password-field';
 export * from './lib/primitives-poc/flex';
 export * from './lib/primitives-poc/text';
-
+export * from './lib/primitives-poc/tabs';
 /**
  * Helpers
  */
