@@ -6,36 +6,39 @@
   wrap="nowrap"
   gap="1rem"
 >
-  <div *ngFor="let field of fields">
+  <h1 *ngIf="title != ''">title</h1>
+  <h4 *ngIf="description != ''">description</h4>
+  <div *ngFor="let field of fieldStaticData">
     <amplify-poc-text-field
       *ngIf="field == 'phone'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-input placeholder="Phone" />
+      <input amplify-input [placeholder]="field" />
     </amplify-poc-text-field>
+
     <amplify-poc-text-field
       *ngIf="field == 'username'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-input placeholder="username" />
+      <input amplify-input [placeholder]="field" />
     </amplify-poc-text-field>
     <amplify-password-poc
       *ngIf="field == 'password'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-password-input placeholder="Password" />
+      <input amplify-password-input [placeholder]="field" />
     </amplify-password-poc>
     <amplify-password-poc
-      *ngIf="field == 'confirmPassword'"
+      *ngIf="field == 'confirmpassword'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-password-input placeholder="Confirm Password" />
+      <input amplify-password-input [placeholder]="field" />
     </amplify-password-poc>
     <amplify-poc-text-field
       *ngIf="field == 'email'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-input placeholder="Email" />
+      <input amplify-input [placeholder]="field" />
     </amplify-poc-text-field>
   </div>
 </amplify-poc-flex>

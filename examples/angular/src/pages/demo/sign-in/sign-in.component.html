@@ -7,7 +7,14 @@
             <div class="amplify-flex amplify-authenticator__column">
               <div class="amplify-flex amplify-authenticator__column">
                 <amplify-fields [fieldType]="signInType"></amplify-fields>
-                <button amplify-button-poc variation="primary">Sign in</button>
+                <button
+                  amplify-button-poc
+                  variation="primary"
+                  (click)="SignIn(signInType)"
+                >
+                  Sign in
+                </button>
+                <p amplify-error *ngIf="isError"></p>
               </div>
             </div>
           </form>
@@ -17,10 +24,13 @@
             <div class="amplify-flex amplify-authenticator__column">
               <div class="amplify-flex amplify-authenticator__column">
                 <amplify-fields
-                  [fieldType]="signInType"
-                  [isSignUp]="true"
+                  [fieldType]="signInType + 'SignUp'"
                 ></amplify-fields>
-                <button amplify-button-poc variation="primary">
+                <button
+                  amplify-button-poc
+                  variation="primary"
+                  (click)="CreateAccount(signInType + 'SignUp')"
+                >
                   Create Account
                 </button>
               </div>

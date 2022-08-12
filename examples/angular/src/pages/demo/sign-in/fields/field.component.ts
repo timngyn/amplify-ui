@@ -1,30 +1,27 @@
 import { Component, Input, OnInit } from '@angular/core';
+import fields from '../../shared/fields.json';
 
 @Component({
   selector: 'amplify-fields',
   templateUrl: 'field.component.html',
 })
 export class AmplifyFieldComponent implements OnInit {
-  @Input() fieldType: string = 'username';
-  @Input() isSignUp: boolean = false;
-  fields: any;
-  fieldStaticData = {
-    username: ['username', 'password'],
-    phone: ['phone', 'password', 'Email'],
-    usernameSignUp: ['username', 'password', 'confirmPassword', 'email'],
-    phoneSignUp: ['phone', 'password', 'confirmPassword', 'email'],
-  };
+  @Input() fieldType:
+    | 'username'
+    | 'phone'
+    | 'usernameSignUp'
+    | 'usernameSignUp'
+    | 'phoneSignUp'
+    | 'phoneSignUp' = 'usernameSignUp';
+
+  @Input() InputObject = {};
+
+  fieldValues = fields;
+  title = fields[this.fieldType]['title'];
+  description = fields[this.fieldType]['description'];
+  fieldStaticData: any;
 
   ngOnInit() {
-    if (!this.isSignUp)
-      this.fields =
-        this.fieldType == 'phone'
-          ? this.fieldStaticData['phone']
-          : this.fieldStaticData['username'];
-    else
-      this.fields =
-        this.fieldType == 'phone'
-          ? this.fieldStaticData['phoneSignUp']
-          : this.fieldStaticData['usernameSignUp'];
+    this.fieldStaticData = this.fieldValues[this.fieldType]['fields'];
   }
 }
