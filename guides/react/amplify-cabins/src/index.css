@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+}
+
+html,
+body,
+#root,
+[data-amplify-theme] {
+  height: 100%;
+  overflow: hidden;
+}
