@@ -7,6 +7,7 @@ import {
   AmplifyPasswordFieldModule,
   AmplifyTextFieldModule,
   AmplifyTabsModule,
+  AmplifyPhoneNumberModule,
 } from '@aws-amplify/ui-angular';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -41,6 +42,7 @@ import { AmplifyButtonExampleComponent } from 'src/pages/ui/primitive-poc/button
 import { AmplifyViewExampleComponent } from 'src/pages/ui/primitive-poc/view/view.component';
 import { AmplifyTextExampleComponent } from 'src/pages/ui/primitive-poc/text/text.component';
 import { AmplifyTextFieldExampleComponent } from 'src/pages/ui/primitive-poc/text-field/text-field.component';
+import { AmplifyPhoneNumberFieldExampleComponent } from 'src/pages/ui/primitive-poc/phone-number/phone-number.component';
 import { AmplifyPasswordFieldExampleComponent } from 'src/pages/ui/primitive-poc/password-field/password-field.component';
 import { AmplifyFlexExampleComponent } from 'src/pages/ui/primitive-poc/flex/flex.component';
 import { AmplifySignInComponent } from 'src/pages/demo/sign-in/sign-in.component';
@@ -74,6 +76,7 @@ import { AmplifyFieldComponent } from 'src/pages/demo/sign-in/fields/field.compo
     AmplifyButtonExampleComponent,
     AmplifyViewExampleComponent,
     AmplifyTextFieldExampleComponent,
+    AmplifyPhoneNumberFieldExampleComponent,
     AmplifyPasswordFieldExampleComponent,
     AmplifyFlexExampleComponent,
     AmplifyTextExampleComponent,
@@ -89,6 +92,7 @@ import { AmplifyFieldComponent } from 'src/pages/demo/sign-in/fields/field.compo
     AmplifyButtonModule,
     AmplifyViewModule,
     AmplifyTextFieldModule,
+    AmplifyPhoneNumberModule,
     AmplifyPasswordFieldModule,
     AmplifyFlexModule,
     AmplifyTextModule,
