@@ -58,9 +58,13 @@ export const theme: Theme = {
       },
       fieldcontrol: {
         borderColor: { value: '{colors.orange.40}' },
+        borderRadius: { value: '{radii.xl}' },
       },
       button: {
         color: { value: '{colors.orange.90}' },
+        borderRadius: {
+          value: '{radii.xl}',
+        },
         _hover: {
           borderColor: { value: '{colors.orange.60}' },
           backgroundColor: { value: '{colors.orange.10}' },
