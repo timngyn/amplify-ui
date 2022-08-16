@@ -16,6 +16,7 @@
         [placeholder]="field"
         name="phonenumber"
         label="phonenumber"
+        required
       />
     </amplify-phone-number-field-poc>
 
@@ -28,13 +29,33 @@
         [placeholder]="field"
         name="username"
         label="username"
+        required
+      />
+    </amplify-poc-text-field>
+    <amplify-poc-text-field
+      *ngIf="field == 'code'"
+      describedBy="custom-aria-describedBy"
+    >
+      <input
+        amplify-input
+        placeholder="Enter the code"
+        name="code"
+        label="code"
+        type="number"
+        required
       />
     </amplify-poc-text-field>
     <amplify-password-poc
       *ngIf="field == 'Password'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-password-input [placeholder]="field" name="password" />
+      <input
+        amplify-password-input
+        [placeholder]="field"
+        name="password"
+        minlength="8"
+        required
+      />
     </amplify-password-poc>
     <amplify-password-poc
       *ngIf="field == 'confirmpassword'"
@@ -43,14 +64,22 @@
       <input
         amplify-password-input
         placeholder="Confirm Password"
+        minlength="8"
         name="repassword"
+        required
       />
     </amplify-password-poc>
     <amplify-poc-text-field
       *ngIf="field == 'Email'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-input [placeholder]="field" name="Email" />
+      <input
+        amplify-input
+        [placeholder]="field"
+        name="Email"
+        type="email"
+        required
+      />
     </amplify-poc-text-field>
   </div>
 </amplify-poc-flex>

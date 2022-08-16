@@ -31,6 +31,7 @@ import { AmplifyFlexExampleComponent } from 'src/pages/ui/primitive-poc/flex/fle
 import { AmplifySignInComponent } from 'src/pages/demo/sign-in/sign-in.component';
 import { AmplifyTabsExampleComponent } from 'src/pages/ui/primitive-poc/tabs/tabs.component';
 import { AmplifyConfirmationComponent } from 'src/pages/demo/sign-up/confirmation/confirmation.component';
+import { AmplifyHomeComponent } from 'src/pages/demo/home/home.component';
 
 const routes: Routes = [
   {
@@ -166,6 +167,10 @@ const routes: Routes = [
   {
     path: 'demo/confirmation',
     component: AmplifyConfirmationComponent,
+  },
+  {
+    path: 'demo/home',
+    component: AmplifyHomeComponent,
   },
 ];
 

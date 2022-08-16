@@ -54,6 +54,7 @@ import { AmplifyWrapperComponent } from 'src/pages/demo/sign-in/wrapper/wrapper.
 import { AmplifyFieldWrapperComponent } from 'src/pages/demo/sign-in/wrapper/field-wrapper.component';
 import { AmplifySignupComponent } from 'src/pages/demo/sign-up/sign-up.component';
 import { AmplifyConfirmationComponent } from 'src/pages/demo/sign-up/confirmation/confirmation.component';
+import { AmplifyHomeComponent } from 'src/pages/demo/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -93,6 +94,7 @@ import { AmplifyConfirmationComponent } from 'src/pages/demo/sign-up/confirmatio
     AmplifyFieldWrapperComponent,
     AmplifySignupComponent,
     AmplifyConfirmationComponent,
+    AmplifyHomeComponent,
   ],
   imports: [
     BrowserModule,

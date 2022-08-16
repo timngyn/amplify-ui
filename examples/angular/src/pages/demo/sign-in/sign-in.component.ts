@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'amplify-button-demo',
@@ -9,34 +9,32 @@ export class AmplifySignInComponent implements OnInit {
   signInType: 'username' | 'phone' | 'usernameSignUp' | 'phoneSignUp' =
     'username';
 
-  objectValue: any;
+  objectValue: { username: string; password: string } = {
+    username: '',
+    password: '',
+  };
 
-  constructor(private activatedroute: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   isError: boolean = false;
-  errorMessage: string = '';
+  errorMessage: string = 'User does not exist.';
+
   ngOnInit() {
-    this.activatedroute.data.subscribe((data) => {
+    this.route.data.subscribe((data) => {
       this.signInType = data['type'];
     });
-  }
-
-  SignIn(value: string) {
-    this.isError = true;
-    this.errorMessage = 'User does not exist.';
   }
 
   onInput(event: Event) {
     event.preventDefault();
     const { name, value } = <HTMLInputElement>event.target;
-    this.objectValue[name] = value;
+    if (name == 'username') this.objectValue['username'] = value;
+    else this.objectValue['password'] = value;
   }
 
   onSubmit(event: Event) {
-    if (this.objectValue['Username'] == '') alert('username');
-  }
-
-  CreateAccount(value: string) {
-    alert('value ' + value);
+    event.preventDefault();
+    if (this.objectValue['username'] == 'error') this.isError = true;
+    else this.router.navigate(['./demo/home']);
   }
 }

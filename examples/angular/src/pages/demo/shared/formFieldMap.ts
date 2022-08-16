@@ -15,4 +15,7 @@ export const formFieldsMap = {
   phoneSignUp: {
     fields: ['Phone', 'Password', 'confirmpassword', 'Email'],
   },
+  confirmationCode: {
+    fields: ['code'],
+  },
 };

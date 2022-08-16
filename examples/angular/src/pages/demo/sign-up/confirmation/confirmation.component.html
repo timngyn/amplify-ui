@@ -1,9 +1,23 @@
 <amplify-wrapper>
-  <form data-amplify-form>
-    <h1 class="amplify-flex amplify-authenticator__column">We Emailed You</h1>
-    <h3 class="amplify-authenticator__subtitle">
-      Your code is on the way. To log in, enter the code we emailed to
-      l***@a***. It may take a minute to arrive.
-    </h3>
+  <form data-amplify-form (submit)="onSubmit($event)" (input)="onInput($event)">
+    <amplify-field-wrapper>
+      <h3 amplify-heading level="3">We Emailed You</h3>
+      <span class="amplify-authenticator__subtitle">
+        Your code is on the way. To log in, enter the code we emailed to
+        l***@a***. It may take a minute to arrive.
+      </span>
+      <amplify-fields [fieldType]="'confirmationCode'"></amplify-fields>
+      <button
+        amplify-button-poc
+        variation="primary"
+        fullWidth="true"
+        type="submit"
+      >
+        Confirm
+      </button>
+      <button amplify-button-poc fullWidth="true" variation="default">
+        Resend Code
+      </button>
+    </amplify-field-wrapper>
   </form>
 </amplify-wrapper>

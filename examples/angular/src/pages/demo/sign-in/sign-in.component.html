@@ -12,7 +12,7 @@
           <button amplify-button-poc variation="primary" type="submit">
             Sign in
           </button>
-          <p amplify-error *ngIf="isError">{{ errorMessage }}</p>
+          <p amplify-error *ngIf="isError == true">{{ errorMessage }}</p>
         </amplify-field-wrapper>
       </form>
     </amplify-tab-item>

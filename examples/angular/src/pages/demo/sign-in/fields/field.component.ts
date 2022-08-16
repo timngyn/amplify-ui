@@ -13,8 +13,12 @@ import { FormField } from '../../shared/formFieldMap';
   templateUrl: 'field.component.html',
 })
 export class AmplifyFieldComponent implements OnInit {
-  @Input() fieldType: 'username' | 'phone' | 'usernameSignUp' | 'phoneSignUp' =
-    'username';
+  @Input() fieldType:
+    | 'username'
+    | 'phone'
+    | 'usernameSignUp'
+    | 'phoneSignUp'
+    | 'confirmationCode' = 'username';
 
   fieldStaticData: FormField = formFieldsMap[this.fieldType];
 
