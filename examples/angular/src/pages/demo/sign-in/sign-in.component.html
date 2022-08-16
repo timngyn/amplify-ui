@@ -1,43 +1,23 @@
-<div data-amplify-authenticator>
-  <div data-amplify-container>
-    <div data-amplify-router style="display: block; box-sizing: border-box">
-      <amplify-tabs>
-        <amplify-tab-item title="Sign In">
-          <form data-amplify-form>
-            <div class="amplify-flex amplify-authenticator__column">
-              <div class="amplify-flex amplify-authenticator__column">
-                <amplify-fields [fieldType]="signInType"></amplify-fields>
-                <button
-                  amplify-button-poc
-                  variation="primary"
-                  (click)="SignIn(signInType)"
-                >
-                  Sign in
-                </button>
-                <p amplify-error *ngIf="isError"></p>
-              </div>
-            </div>
-          </form>
-        </amplify-tab-item>
-        <amplify-tab-item title="Create Account">
-          <form data-amplify-form>
-            <div class="amplify-flex amplify-authenticator__column">
-              <div class="amplify-flex amplify-authenticator__column">
-                <amplify-fields
-                  [fieldType]="signInType + 'SignUp'"
-                ></amplify-fields>
-                <button
-                  amplify-button-poc
-                  variation="primary"
-                  (click)="CreateAccount(signInType + 'SignUp')"
-                >
-                  Create Account
-                </button>
-              </div>
-            </div>
-          </form>
-        </amplify-tab-item>
-      </amplify-tabs>
-    </div>
-  </div>
-</div>
+<amplify-wrapper>
+  <amplify-tabs>
+    <amplify-tab-item title="Sign In">
+      <form
+        data-amplify-form
+        (submit)="onSubmit($event)"
+        (input)="onInput($event)"
+      >
+        <amplify-field-wrapper>
+          <amplify-fields [fieldType]="signInType"></amplify-fields>
+
+          <button amplify-button-poc variation="primary" type="submit">
+            Sign in
+          </button>
+          <p amplify-error *ngIf="isError">{{ errorMessage }}</p>
+        </amplify-field-wrapper>
+      </form>
+    </amplify-tab-item>
+    <amplify-tab-item title="Create Account">
+      <amplify-sign-up-demo [signInType]="signInType"></amplify-sign-up-demo>
+    </amplify-tab-item>
+  </amplify-tabs>
+</amplify-wrapper>

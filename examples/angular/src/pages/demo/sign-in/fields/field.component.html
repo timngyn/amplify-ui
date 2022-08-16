@@ -6,39 +6,51 @@
   wrap="nowrap"
   gap="1rem"
 >
-  <h1 *ngIf="title != ''">title</h1>
-  <h4 *ngIf="description != ''">description</h4>
-  <div *ngFor="let field of fieldStaticData">
-    <amplify-poc-text-field
-      *ngIf="field == 'phone'"
+  <div *ngFor="let field of fieldStaticData['fields']">
+    <amplify-phone-number-field-poc
+      *ngIf="field == 'Phone'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-input [placeholder]="field" />
-    </amplify-poc-text-field>
+      <input
+        amplify-phone-number-input
+        [placeholder]="field"
+        name="phonenumber"
+        label="phonenumber"
+      />
+    </amplify-phone-number-field-poc>
 
     <amplify-poc-text-field
-      *ngIf="field == 'username'"
+      *ngIf="field == 'Username'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-input [placeholder]="field" />
+      <input
+        amplify-input
+        [placeholder]="field"
+        name="username"
+        label="username"
+      />
     </amplify-poc-text-field>
     <amplify-password-poc
-      *ngIf="field == 'password'"
+      *ngIf="field == 'Password'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-password-input [placeholder]="field" />
+      <input amplify-password-input [placeholder]="field" name="password" />
     </amplify-password-poc>
     <amplify-password-poc
       *ngIf="field == 'confirmpassword'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-password-input [placeholder]="field" />
+      <input
+        amplify-password-input
+        placeholder="Confirm Password"
+        name="repassword"
+      />
     </amplify-password-poc>
     <amplify-poc-text-field
-      *ngIf="field == 'email'"
+      *ngIf="field == 'Email'"
       describedBy="custom-aria-describedBy"
     >
-      <input amplify-input [placeholder]="field" />
+      <input amplify-input [placeholder]="field" name="Email" />
     </amplify-poc-text-field>
   </div>
 </amplify-poc-flex>

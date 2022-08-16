@@ -1,27 +1,24 @@
-import { Component, Input, OnInit } from '@angular/core';
-import fields from '../../shared/fields.json';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
+import { formFieldsMap } from '../../shared/formFieldMap';
+import { FormField } from '../../shared/formFieldMap';
 
 @Component({
   selector: 'amplify-fields',
   templateUrl: 'field.component.html',
 })
 export class AmplifyFieldComponent implements OnInit {
-  @Input() fieldType:
-    | 'username'
-    | 'phone'
-    | 'usernameSignUp'
-    | 'usernameSignUp'
-    | 'phoneSignUp'
-    | 'phoneSignUp' = 'usernameSignUp';
+  @Input() fieldType: 'username' | 'phone' | 'usernameSignUp' | 'phoneSignUp' =
+    'username';
 
-  @Input() InputObject = {};
-
-  fieldValues = fields;
-  title = fields[this.fieldType]['title'];
-  description = fields[this.fieldType]['description'];
-  fieldStaticData: any;
+  fieldStaticData: FormField = formFieldsMap[this.fieldType];
 
   ngOnInit() {
-    this.fieldStaticData = this.fieldValues[this.fieldType]['fields'];
+    this.fieldStaticData = formFieldsMap[this.fieldType];
   }
 }

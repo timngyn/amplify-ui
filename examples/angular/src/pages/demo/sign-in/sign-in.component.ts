@@ -6,14 +6,10 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: 'sign-in.component.html',
 })
 export class AmplifySignInComponent implements OnInit {
-  signInType:
-    | 'username'
-    | 'phone'
-    | 'usernameSignUp'
-    | 'usernameSignUp'
-    | 'phoneSignUp'
-    | 'phoneSignUp'
-    | 'confirmCode' = 'username';
+  signInType: 'username' | 'phone' | 'usernameSignUp' | 'phoneSignUp' =
+    'username';
+
+  objectValue: any;
 
   constructor(private activatedroute: ActivatedRoute) {}
 
@@ -27,7 +23,17 @@ export class AmplifySignInComponent implements OnInit {
 
   SignIn(value: string) {
     this.isError = true;
-    this.errorMessage = 'Enter valid cred';
+    this.errorMessage = 'User does not exist.';
+  }
+
+  onInput(event: Event) {
+    event.preventDefault();
+    const { name, value } = <HTMLInputElement>event.target;
+    this.objectValue[name] = value;
+  }
+
+  onSubmit(event: Event) {
+    if (this.objectValue['Username'] == '') alert('username');
   }
 
   CreateAccount(value: string) {

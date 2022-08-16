@@ -48,7 +48,10 @@ import { AmplifyFlexExampleComponent } from 'src/pages/ui/primitive-poc/flex/fle
 import { AmplifySignInComponent } from 'src/pages/demo/sign-in/sign-in.component';
 import { AmplifyTabsExampleComponent } from 'src/pages/ui/primitive-poc/tabs/tabs.component';
 import { AmplifyFieldComponent } from 'src/pages/demo/sign-in/fields/field.component';
-
+import { AmplifyWrapperComponent } from 'src/pages/demo/sign-in/wrapper/wrapper.component';
+import { AmplifyFieldWrapperComponent } from 'src/pages/demo/sign-in/wrapper/field-wrapper.component';
+import { AmplifySignupComponent } from 'src/pages/demo/sign-up/sign-up.component';
+import { AmplifyConfirmationComponent } from 'src/pages/demo/sign-up/confirmation/confirmation.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,6 +86,10 @@ import { AmplifyFieldComponent } from 'src/pages/demo/sign-in/fields/field.compo
     AmplifySignInComponent,
     AmplifyTabsExampleComponent,
     AmplifyFieldComponent,
+    AmplifyWrapperComponent,
+    AmplifyFieldWrapperComponent,
+    AmplifySignupComponent,
+    AmplifyConfirmationComponent,
   ],
   imports: [
     BrowserModule,
