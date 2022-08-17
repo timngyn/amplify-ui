@@ -2,10 +2,10 @@ body {
   margin: 0;
 }
 
-html,
+/* html,
 body,
 #root,
 [data-amplify-theme] {
   height: 100%;
   overflow: hidden;
-}
+} */

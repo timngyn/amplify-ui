@@ -5,10 +5,13 @@ import {
   Flex,
   Rating,
   Button,
+  Icon,
+  TextField,
   useTheme,
 } from '@aws-amplify/ui-react';
 
 import Layout from '../components/Layout';
+import Logo from '../components/Logo';
 
 export default function Theme() {
   console.log('tokens: ', useTheme().tokens);
@@ -17,6 +20,7 @@ export default function Theme() {
       <View>
         <Card maxWidth="800px" margin="auto">
           <Flex direction="column">
+            <Icon as={Logo} />
             <Heading level={2}>Greens</Heading>
             <Flex>
               <Box color="green.10"></Box>
@@ -64,6 +68,8 @@ export default function Theme() {
               <Button variation="primary">Primary</Button>{' '}
               <Button>Default</Button>
             </Flex>
+            <Heading level={2}>Text field</Heading>
+            <TextField label="Text label" />
           </Flex>
         </Card>
       </View>

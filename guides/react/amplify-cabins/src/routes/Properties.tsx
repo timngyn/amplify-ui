@@ -7,19 +7,7 @@ import Layout from '../components/Layout';
 export default function Properties() {
   return (
     <Layout>
-      <Collection
-        items={properties}
-        type="grid"
-        maxWidth="1100px"
-        margin="0 auto"
-        justifyContent="center"
-        templateColumns={{
-          base: 'minmax(0, 500px)',
-          medium: 'repeat(2, minmax(0, 1fr))',
-          large: 'repeat(3, minmax(0, 1fr))',
-        }}
-        gap="small"
-      >
+      <Collection items={properties} type="grid" templateColumns="500px">
         {(item, index) => <PropertyCard key={index} {...item}></PropertyCard>}
       </Collection>
     </Layout>
