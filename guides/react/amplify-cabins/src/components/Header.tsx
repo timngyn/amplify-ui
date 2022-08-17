@@ -12,14 +12,8 @@ import { useNavigate } from 'react-router-dom';
 import Logo from './Logo';
 
 export default function Header() {
-  const { route, signOut } = useAuthenticator((context) => [
-    context.route,
-    context.signOut,
-  ]);
-
   const navigate = useNavigate();
   function logOut() {
-    signOut();
     navigate('/login');
   }
 
@@ -31,20 +25,9 @@ export default function Header() {
             <Icon as={Logo}></Icon>
           </Link>
           <View marginLeft="auto">
-            {route === 'authenticated' ? (
-              <Flex alignItems="center">
-                <Button onClick={() => navigate('/login')} size="small">
-                  Admin
-                </Button>
-                <Button size="small" variation="link" onClick={() => logOut()}>
-                  Sign out
-                </Button>
-              </Flex>
-            ) : (
-              <Button onClick={() => navigate('/login')} size="small">
-                Sign in
-              </Button>
-            )}
+            <Button onClick={() => navigate('/login')} size="small">
+              Sign in
+            </Button>
           </View>
         </Flex>
       </Card>

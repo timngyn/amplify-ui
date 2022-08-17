@@ -10,21 +10,10 @@ import {
 import Layout from '../components/Layout';
 
 export default function Login() {
-  const { route } = useAuthenticator((context) => [context.route]);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (route === 'authenticated') {
-      navigate('/admin', { replace: true });
-    }
-  }, [route, navigate]);
-
   return (
     <Layout>
       <Flex direction="column" height="100%">
-        <View margin="auto">
-          <Authenticator></Authenticator>
-        </View>
+        <View margin="auto">Authenticator goes here</View>
       </Flex>
     </Layout>
   );

@@ -12,14 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Properties />} />
         <Route path="/login" element={<Login />} />
-        <Route
-          path="/admin"
-          element={
-            <RequireAuth>
-              <EditProperty />
-            </RequireAuth>
-          }
-        />
+        <Route path="/admin" element={<EditProperty />} />
         <Route path="/theme" element={<Theme />} />
       </Routes>
     </BrowserRouter>
