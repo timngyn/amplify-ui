@@ -23,16 +23,14 @@ export default function PropertyCard({
 }: PropertyProps) {
   return (
     <a href="/">
-      <>
-        <img width="100%" height="300px" alt={thumbnailAlt} src={thumbnail} />
-        <h2>{name}</h2>
-        <div>{rating}</div>
-        {BiBed} {beds} bed
-        <div>
-          <span>${rate}</span>
-          <span> / night</span>
-        </div>
-      </>
+      <img width="100%" height="300px" alt={thumbnailAlt} src={thumbnail} />
+      <h2>{name}</h2>
+      <div>{rating}</div>
+      {beds} bed
+      <div>
+        <span>${rate}</span>
+        <span> / night</span>
+      </div>
     </a>
   );
 }
