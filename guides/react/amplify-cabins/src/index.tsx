@@ -9,11 +9,6 @@ import './index.css';
 
 import { theme } from './theme';
 
-import aws_exports from './aws-exports.js';
-// import aws_exports from '../../../../environments/auth-with-username/src/aws-exports.js';
-
-Amplify.configure(aws_exports);
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
