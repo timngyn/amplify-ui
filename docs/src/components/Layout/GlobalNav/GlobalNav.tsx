@@ -3,17 +3,11 @@ import {
   Flex,
   Icon,
   Text,
+  useBreakpointValue,
   View,
   VisuallyHidden,
 } from '@aws-amplify/ui-react';
-import {
-  createContext,
-  useMemo,
-  useState,
-  useLayoutEffect,
-  useRef,
-  useEffect,
-} from 'react';
+import { createContext, useMemo, useState } from 'react';
 import styles from './GlobalNav.module.scss';
 import { NavMenuLink } from './components/NavMenuLink';
 import { ChevronIcon } from './components/icons';
@@ -32,7 +26,6 @@ interface NavProps {
   currentSite: string;
   secondaryNavDesktop?: JSX.Element;
   secondaryNavMobile?: JSX.Element;
-  setIsMobileState?: any;
 }
 
 type NavMobileContextType = {
@@ -72,50 +65,7 @@ export function GlobalNav({
     windowInnerWidth = window.innerWidth;
   }
 
-  const [isMobileState, setIsMobileState] = useState(false);
-  const [mobileNavBreakpoint, setMobileNavBreakpoint] = useState(0);
-  const [currentWindowInnerWidth, setCurrentWindowInnerWidth] =
-    useState(windowInnerWidth);
-
-  const navLinksContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (navLinksContainerRef.current !== null) {
-      if (
-        navLinksContainerRef.current.scrollWidth >
-        navLinksContainerRef.current.clientWidth
-      ) {
-        setIsMobileState(true);
-        setMobileNavBreakpoint(window.innerWidth);
-      }
-    }
-
-    const handleWindowSizeChange = () => {
-      setCurrentWindowInnerWidth(window.innerWidth);
-
-      if (navLinksContainerRef.current !== null) {
-        if (
-          navLinksContainerRef.current.scrollWidth >
-          navLinksContainerRef.current.clientWidth
-        ) {
-          setIsMobileState(true);
-          setMobileNavBreakpoint(window.innerWidth);
-        }
-      }
-    };
-
-    window.addEventListener('resize', handleWindowSizeChange);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowSizeChange);
-    };
-  }, []);
-
-  useLayoutEffect(() => {
-    if (currentWindowInnerWidth > mobileNavBreakpoint) {
-      setIsMobileState(false);
-    }
-  }, [currentWindowInnerWidth, mobileNavBreakpoint]);
+  const isMobileState = useBreakpointValue({ base: true, xl: false });
 
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [showGlobalNav, setShowGlobalNav] = useState(
@@ -257,7 +207,6 @@ export function GlobalNav({
       aria-label="Amplify Dev Center Global"
     >
       <Flex
-        ref={navLinksContainerRef}
         id="nav-links-container"
         height="80px"
         alignItems="center"
