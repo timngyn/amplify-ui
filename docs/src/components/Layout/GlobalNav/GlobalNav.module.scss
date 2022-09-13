@@ -1,19 +1,3 @@
-@font-face {
-  font-family: Amazon Ember;
-  src: url(./fonts/AmazonEmber_W_Lt.woff2) format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Amazon Ember;
-  src: url(./fonts/AmazonEmber_W_Rg.woff2) format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 .add-variables {
   --amplify-colors-font-primary: #232f3e;
   --amplify-colors-font-tertiary: #545b64;
@@ -86,6 +70,15 @@
   flex-direction: column;
   width: 100%;
   border-bottom: 1px solid #d5dbdb;
+  transform-origin: top center;
+
+  &.closed {
+    animation: slideClosed var(--amplify-time-long) forwards;
+    animation-direction: reverse;
+  }
+  &.open {
+    animation: slideOpen var(--amplify-time-long) forwards;
+  }
 }
 
 .mobile-nav-icons-container {
@@ -170,4 +163,22 @@
 
 .chevron-icon {
   fill: var(--amplify-colors-font-tertiary);
+}
+
+@keyframes slideOpen {
+  0% {
+    transform: scaleY(0%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}
+
+@keyframes slideClosed {
+  0% {
+    transform: scaleY(0%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
 }

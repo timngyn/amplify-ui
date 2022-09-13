@@ -82,6 +82,7 @@ export function GlobalNav({
     useState(windowInnerWidth);
   const [currentWindowInnerWidth, setCurrentWindowInnerWidth] =
     useState(windowInnerWidth);
+  const [runAnimation, setRunAnimation] = useState(false);
 
   const navLinksContainerRef = useRef<HTMLDivElement>(null);
   const navLinksRightRef = useRef<HTMLDivElement>(null);
@@ -180,6 +181,7 @@ export function GlobalNav({
             aria-controls="mobile-nav-links"
             border="none"
             onClick={() => {
+              setRunAnimation(true);
               setIsCollapsed(!isCollapsed);
             }}
           >
@@ -193,12 +195,14 @@ export function GlobalNav({
             )}
           </Button>
         </View>
-        {isCollapsed ? (
-          <></>
-        ) : (
+        {runAnimation ? (
           <View id="mobile-nav-links">
             {showGlobalNav ? (
-              <View className={styles['mobile-nav-menu-container']}>
+              <View
+                className={`${styles['mobile-nav-menu-container']} ${
+                  isCollapsed ? styles['closed'] : styles['open']
+                }`}
+              >
                 {links
                   .filter((link) => link.type !== 'ICON')
                   .map((link) => (
@@ -264,6 +268,8 @@ export function GlobalNav({
               </Flex>
             )}
           </View>
+        ) : (
+          <></>
         )}
       </nav>
       {isCollapsed ? (
