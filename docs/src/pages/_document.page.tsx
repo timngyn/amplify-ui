@@ -67,7 +67,13 @@ class MyDocument extends Document {
 
           <link rel="icon" type="image/svg+xml" href={favicon} />
 
-          <link rel="preload" href="/fonts.css" as="style" type="text/css" />
+          <link
+            rel="preload"
+            href="/fonts/AmazonEmber_W_Rg.woff2"
+            as="font"
+            crossOrigin=""
+            type="font/woff2"
+          />
         </Head>
         <body>
           <Main />

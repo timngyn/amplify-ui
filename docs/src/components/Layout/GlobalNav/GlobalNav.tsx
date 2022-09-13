@@ -115,6 +115,8 @@ export function GlobalNav({
     };
   }, []);
 
+  let renderMobile = false;
+
   useLayoutEffect(() => {
     if (
       navLinksContainerRef.current &&
@@ -130,6 +132,7 @@ export function GlobalNav({
       console.log('navLinksRightBCR.right ', navLinksRightBCR.right);
       console.log('navLinksContainerBCR.right ', navLinksContainerBCR.right);
       if (navLinksRightBCR.right >= navLinksContainerBCR.right) {
+        renderMobile = true;
         setIsMobileState(true);
         setMobileNavBreakpoint(window.innerWidth);
       }
@@ -154,7 +157,7 @@ export function GlobalNav({
     [showGlobalNav]
   );
 
-  return isMobileState ? (
+  return isMobileState || renderMobile ? (
     <NavMobileContext.Provider value={value}>
       <nav
         className={`${styles.navbar} ${themeClass}`}
